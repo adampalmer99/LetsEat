@@ -7,13 +7,13 @@
 
 import Foundation
 
-class ExploreDataManager {
+class ExploreDataManager: DataManager {
     
     private var exploreItems: [ExploreItem] = []
     
     func fetch() {
-        for data in loadData() {
-            exploreItems.append(ExploreItem(dict: data))
+        for data in loadPlist(file: "ExploreData") {
+            exploreItems.append(ExploreItem(dict: data as! [String: String]))
         }
     }
     

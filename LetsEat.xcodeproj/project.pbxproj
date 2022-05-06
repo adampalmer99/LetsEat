@@ -25,6 +25,7 @@
 		12A3E1222824125600D5AFBA /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E1212824125600D5AFBA /* RestaurantItem.swift */; };
 		12A3E1242824260E00D5AFBA /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E1232824260E00D5AFBA /* MapDataManager.swift */; };
 		12A3E127282524A100D5AFBA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E126282524A100D5AFBA /* DataManager.swift */; };
+		12A3E12928254D2400D5AFBA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E12828254D2400D5AFBA /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		12A3E1212824125600D5AFBA /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
 		12A3E1232824260E00D5AFBA /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
 		12A3E126282524A100D5AFBA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		12A3E12828254D2400D5AFBA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				12A3E11E28240CEC00D5AFBA /* Model */,
+				12A3E12828254D2400D5AFBA /* MapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				0653DB882730CFB500D63233 /* AppDelegate.swift in Sources */,
 				06670596273227A900545EB6 /* RestaurantListViewController.swift in Sources */,
 				0653DB8A2730CFB500D63233 /* SceneDelegate.swift in Sources */,
+				12A3E12928254D2400D5AFBA /* MapViewController.swift in Sources */,
 				06AFDA1827311E3900A647E1 /* ExploreViewController.swift in Sources */,
 				06C1CB432734A30200C385A7 /* ExploreDataManager.swift in Sources */,
 				06C1CB462734A4E100C385A7 /* ExploreCell.swift in Sources */,
