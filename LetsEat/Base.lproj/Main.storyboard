@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m4h-AL-F1u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m4h-AL-F1u">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -444,10 +444,10 @@
             </objects>
             <point key="canvasLocation" x="2303" y="92"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="C2o-jr-gyX">
             <objects>
-                <viewController id="dRS-sy-HPR" sceneMemberID="viewController">
+                <viewController id="dRS-sy-HPR" customClass="LocationViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CH0-aW-D0J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,6 +474,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dRS-sy-HPR" id="WVS-xa-47X"/>
+                                    <outlet property="delegate" destination="dRS-sy-HPR" id="a5e-GO-4Ut"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5MF-68-4U1"/>
@@ -493,6 +497,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="58V-k8-GN3"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="TCR-D0-jgo" id="rlV-8Y-HnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4h7-fK-Fu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="LqK-Ae-8Qc" userLabel="Exit" sceneMemberID="exit"/>
