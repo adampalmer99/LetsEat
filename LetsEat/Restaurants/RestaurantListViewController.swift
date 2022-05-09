@@ -7,22 +7,31 @@
 
 import UIKit
 
-class RestaurantListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+}
+
+
+// MARK: Private Extension
+
+private extension RestaurantListViewController {
+    
+}
+
+// MARK: RestaurantListViewController
+
+extension RestaurantListViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath)
     }
-
 }
