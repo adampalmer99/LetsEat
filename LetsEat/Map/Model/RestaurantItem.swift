@@ -8,7 +8,20 @@
 import UIKit
 import MapKit
 
-class RestaurantItem: NSObject, MKAnnotation {
+class RestaurantItem: NSObject, MKAnnotation, Decodable {
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case cuisines
+        case lat
+        case long
+        case address
+        case postalCode = "postal_code"
+        case state
+        case imageURL = "image_url"
+        case restaurantID = "id"
+    }
+    
     let name: String?
     let cuisines: [String]
     let lat: Double?
@@ -19,17 +32,7 @@ class RestaurantItem: NSObject, MKAnnotation {
     let imageURL: String?
     let restaurantID: Int?
     
-    init(dict: [String: AnyObject]) {
-        self.lat = dict["lat"] as? Double
-        self.long = dict["long"] as? Double
-        self.name = dict["name"] as? String
-        self.cuisines = dict["cuisines"] as? [String] ?? []
-        self.address = dict["address"] as? String
-        self.postalCode = dict["postalCode"] as? String
-        self.state = dict["state"] as? String
-        self.imageURL = dict["image_url"] as? String
-        self.restaurantID = dict["id"] as? Int
-    }
+    
     
     var coordinate: CLLocationCoordinate2D {
         guard let lat = lat, let long = long else {

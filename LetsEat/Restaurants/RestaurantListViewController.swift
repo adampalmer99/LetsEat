@@ -9,10 +9,20 @@ import UIKit
 
 class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
     
+    var selectedRestaurant: RestaurantItem?
+    var selectedCity: LocationItem?
+    var selectedCuisine: String?
+    
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("Selected city \(selectedCity as Any)")
+        print("Selected cuisine \(selectedCuisine as Any)")
     }
 }
 

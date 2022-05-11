@@ -114,11 +114,11 @@
                                         <connections>
                                             <outlet property="exploreImageView" destination="UZ9-95-B1c" id="Fyo-uZ-Bsc"/>
                                             <outlet property="exploreNameLabel" destination="zCq-gg-anD" id="yuw-kr-FVx"/>
-                                            <segue destination="qYU-Nh-eA4" kind="show" id="M3h-e8-tXr"/>
+                                            <segue destination="qYU-Nh-eA4" kind="show" identifier="restaurantList" id="M3h-e8-tXr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="jWx-26-YXu">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="jWx-26-YXu" customClass="ExploreHeaderView" customModule="LetsEat" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -152,7 +152,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="btn-location"/>
                                                     <connections>
-                                                        <segue destination="FY1-1l-oEX" kind="presentation" id="DCn-gR-YUp"/>
+                                                        <segue destination="FY1-1l-oEX" kind="presentation" identifier="locationList" id="DCn-gR-YUp"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWA-qm-Yg9">
@@ -185,6 +185,9 @@
                                         <constraint firstAttribute="trailing" secondItem="1Sd-9p-A8g" secondAttribute="trailing" id="rXK-pD-meZ"/>
                                         <constraint firstItem="1Sd-9p-A8g" firstAttribute="top" secondItem="jWx-26-YXu" secondAttribute="top" id="uqr-eJ-Eie"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="LocationLabel" destination="B4n-CR-REL" id="97t-2Z-zhk"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BC4-Kg-LEE" id="xRI-ug-CbH"/>
@@ -509,7 +512,11 @@
                                 <segue destination="LqK-Ae-8Qc" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="Qa2-2a-3dF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="58V-k8-GN3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="58V-k8-GN3">
+                            <connections>
+                                <segue destination="LqK-Ae-8Qc" kind="unwind" unwindAction="unwindLocationDoneWithSegue:" id="RxI-bp-ewa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TCR-D0-jgo" id="rlV-8Y-HnN"/>
