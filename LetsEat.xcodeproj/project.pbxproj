@@ -48,6 +48,9 @@
 		12A3E15928296FA700D5AFBA /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E15828296FA700D5AFBA /* RestaurantDataManager.swift */; };
 		12A3E15B282A736700D5AFBA /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E15A282A736700D5AFBA /* LocationItem.swift */; };
 		12A3E15F282AA40D00D5AFBA /* ExploreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E15E282AA40D00D5AFBA /* ExploreHeaderView.swift */; };
+		12A3E164282BF91E00D5AFBA /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E163282BF91E00D5AFBA /* RestaurantCell.swift */; };
+		12A3E167282BFACC00D5AFBA /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E166282BFACC00D5AFBA /* NoDataView.swift */; };
+		12A3E169282C09EA00D5AFBA /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3E168282C09EA00D5AFBA /* NoDataView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		12A3E15828296FA700D5AFBA /* RestaurantDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataManager.swift; sourceTree = "<group>"; };
 		12A3E15A282A736700D5AFBA /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		12A3E15E282AA40D00D5AFBA /* ExploreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHeaderView.swift; sourceTree = "<group>"; };
+		12A3E163282BF91E00D5AFBA /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		12A3E166282BFACC00D5AFBA /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		12A3E168282C09EA00D5AFBA /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 		066705942732278500545EB6 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
+				12A3E160282BF86800D5AFBA /* View */,
 				06670595273227A900545EB6 /* RestaurantListViewController.swift */,
 				12A3E15828296FA700D5AFBA /* RestaurantDataManager.swift */,
 			);
@@ -266,6 +273,7 @@
 		12A3E1252825248100D5AFBA /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				12A3E165282BFA9800D5AFBA /* No Data */,
 				12A3E13B28296CAE00D5AFBA /* JSON */,
 				12A3E126282524A100D5AFBA /* DataManager.swift */,
 				12A3E133282920DA00D5AFBA /* Segue.swift */,
@@ -317,6 +325,23 @@
 				12A3E14428296D1500D5AFBA /* San Francisco.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		12A3E160282BF86800D5AFBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12A3E163282BF91E00D5AFBA /* RestaurantCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12A3E165282BFA9800D5AFBA /* No Data */ = {
+			isa = PBXGroup;
+			children = (
+				12A3E166282BFACC00D5AFBA /* NoDataView.swift */,
+				12A3E168282C09EA00D5AFBA /* NoDataView.xib */,
+			);
+			path = "No Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +457,7 @@
 				12A3E14F28296D1500D5AFBA /* Los Angeles.json in Resources */,
 				12A3E14D28296D1500D5AFBA /* Houston.json in Resources */,
 				0653DBB82730D1AD00D63233 /* Assets.xcassets in Resources */,
+				12A3E169282C09EA00D5AFBA /* NoDataView.xib in Resources */,
 				12A3E14E28296D1500D5AFBA /* Philadelphia.json in Resources */,
 				12A3E15128296D1500D5AFBA /* Boston.json in Resources */,
 				12A3E15028296D1500D5AFBA /* Charleston.json in Resources */,
@@ -475,10 +501,12 @@
 				06C1CB412734A22300C385A7 /* ExploreItem.swift in Sources */,
 				12A3E127282524A100D5AFBA /* DataManager.swift in Sources */,
 				12A3E1242824260E00D5AFBA /* MapDataManager.swift in Sources */,
+				12A3E167282BFACC00D5AFBA /* NoDataView.swift in Sources */,
 				0653DB882730CFB500D63233 /* AppDelegate.swift in Sources */,
 				12A3E15928296FA700D5AFBA /* RestaurantDataManager.swift in Sources */,
 				06670596273227A900545EB6 /* RestaurantListViewController.swift in Sources */,
 				12A3E134282920DA00D5AFBA /* Segue.swift in Sources */,
+				12A3E164282BF91E00D5AFBA /* RestaurantCell.swift in Sources */,
 				0653DB8A2730CFB500D63233 /* SceneDelegate.swift in Sources */,
 				12A3E13A2829270200D5AFBA /* RestaurantDetailViewController.swift in Sources */,
 				12A3E12928254D2400D5AFBA /* MapViewController.swift in Sources */,

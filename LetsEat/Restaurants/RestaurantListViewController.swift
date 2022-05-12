@@ -9,6 +9,7 @@ import UIKit
 
 class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
     
+    private let manager = RestaurantDataManager()
     var selectedRestaurant: RestaurantItem?
     var selectedCity: LocationItem?
     var selectedCuisine: String?
@@ -21,8 +22,23 @@ class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("Selected city \(selectedCity as Any)")
-        print("Selected cuisine \(selectedCuisine as Any)")
+        createData()
+        setupTitle()
+        guard let city = selectedCity?.city, let cuisine = selectedCuisine else {
+            return
+        }
+        let manager = RestaurantDataManager()
+        manager.fetch(location: city, selectedCuisine: cuisine) {
+            RestaurantItems in if !RestaurantItems.isEmpty {
+                for RestaurantItem in RestaurantItems {
+                    if let restaurantName = RestaurantItem.name {
+                        print(restaurantName)
+                    }
+                }
+            } else {
+                print("No data")
+            }
+        }
     }
 }
 
@@ -31,6 +47,26 @@ class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
 
 private extension RestaurantListViewController {
     
+    func createData() {
+        guard let city = selectedCity?.city, let cuisine = selectedCuisine else {
+            return
+        }
+        manager.fetch(location: city, selectedCuisine: cuisine) {restaurantItems in if !restaurantItems.isEmpty {
+            collectionView.backgroundView = nil
+        } else {
+            let view = NoDataView(frame: CGRect(x: 0, y: 0, width: collectionView.frame.width, height: collectionView.frame.height))
+            view.set(title: "Restaurants", desc: "No restaurants found.")
+            collectionView.backgroundView = view
+        }
+            collectionView.reloadData()
+        }
+    }
+    
+    func setupTitle() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        title = selectedCity?.cityAndState.uppercased()
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 }
 
 // MARK: RestaurantListViewController
@@ -38,10 +74,26 @@ private extension RestaurantListViewController {
 extension RestaurantListViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
+        manager.numberOfRestaurantItems()
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCell
+        let restaurantItem = manager.restaurantItem(at: indexPath.row)
+        cell.titleLabel.text = restaurantItem.name
+        if let cuisine = restaurantItem.subtitle {
+            cell.cuisineLabel.text = cuisine
+        }
+        if let imageURL = restaurantItem.imageURL {
+            if let url = URL(string: imageURL) {
+                let data = try? Data(contentsOf: url)
+                if let imageData = data {
+                    DispatchQueue.main.async {
+                        cell.restaurantImageView.image = UIImage(data: imageData)
+                    }
+                }
+            }
+        }
+        return cell
     }
 }

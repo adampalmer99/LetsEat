@@ -19,6 +19,24 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
         initialize()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case Segue.locationList.rawValue:
+            showLocationList(segue: segue)
+        case Segue.restaurantList.rawValue:
+            showRestaurantList(segue: segue)
+        default:
+            print("Segue not added")
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == Segue.restaurantList.rawValue, selectedCity == nil {
+            showLocationRequiredAlert()
+            return false
+        }
+        return true
+    }
    
 
 }
@@ -26,6 +44,7 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
 // MARK: Private Extension
 
 private extension ExploreViewController {
+    
     func initialize() {
         manager.fetch()
     }

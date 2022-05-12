@@ -217,7 +217,7 @@
         <scene sceneID="0pw-v2-k6d">
             <objects>
                 <viewController id="qYU-Nh-eA4" customClass="RestaurantListViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uEU-DP-mmF">
+                    <view key="view" contentMode="scaleToFill" id="uEU-DP-mmF" customClass="UICollectionView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -231,7 +231,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="asz-bq-jbo">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="asz-bq-jbo" customClass="RestaurantCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="335" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WLo-or-Nko">
@@ -345,6 +345,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="cuisineLabel" destination="GXp-ML-h2H" id="n2N-Q9-81T"/>
+                                            <outlet property="restaurantImageView" destination="fFI-Ev-NFU" id="6kG-rh-gYM"/>
+                                            <outlet property="titleLabel" destination="FBC-uL-Dni" id="1Dm-3D-ltL"/>
                                             <segue destination="sJ7-BB-3YO" kind="show" id="AVq-x8-HEh"/>
                                         </connections>
                                     </collectionViewCell>
