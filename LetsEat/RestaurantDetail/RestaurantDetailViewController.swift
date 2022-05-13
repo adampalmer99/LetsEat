@@ -35,11 +35,10 @@ class RestaurantDetailViewController: UITableViewController {
         initialise()
 
     }
-
 }
 
 private extension RestaurantDetailViewController {
-    
+ 
     func initialise() {
         setupLabels()
         creaateMap()

@@ -20,6 +20,15 @@ class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case Segue.showDetail.rawValue: showRestaurantDetail(segue: segue)
+            default: print("Segue not added")
+            }
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         createData()
@@ -46,6 +55,13 @@ class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
 // MARK: Private Extension
 
 private extension RestaurantListViewController {
+    
+    func showRestaurantDetail(segue: UIStoryboardSegue) {
+        if let viewController = segue.destination as? RestaurantDetailViewController, let indexPath = collectionView.indexPathsForSelectedItems?.first {
+            selectedRestaurant = manager.restaurantItem(at: indexPath.row)
+            viewController.selectedRestaurant = selectedRestaurant
+        }
+    }
     
     func createData() {
         guard let city = selectedCity?.city, let cuisine = selectedCuisine else {
