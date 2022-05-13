@@ -25,6 +25,8 @@ class RestaurantDetailViewController: UITableViewController {
     // Cell Nine
     @IBOutlet var locationMapImageView: UIImageView!
     
+    @IBOutlet var  ratingsView: RatingsView!
+    
     
     
     
@@ -42,6 +44,16 @@ private extension RestaurantDetailViewController {
     func initialise() {
         setupLabels()
         creaateMap()
+        createRating()
+    }
+    
+    @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {
+        
+    }
+    
+    func createRating() {
+        ratingsView.rating = 3.5
+        ratingsView.isEnabled = true
     }
     
     

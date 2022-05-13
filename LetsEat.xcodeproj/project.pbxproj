@@ -51,6 +51,8 @@
 		12A3E164282BF91E00D5AFBA /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E163282BF91E00D5AFBA /* RestaurantCell.swift */; };
 		12A3E167282BFACC00D5AFBA /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E166282BFACC00D5AFBA /* NoDataView.swift */; };
 		12A3E169282C09EA00D5AFBA /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3E168282C09EA00D5AFBA /* NoDataView.xib */; };
+		12A3E16B282E62DB00D5AFBA /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E16A282E62DB00D5AFBA /* RatingsView.swift */; };
+		12A3E16D282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E16C282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		12A3E163282BF91E00D5AFBA /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		12A3E166282BFACC00D5AFBA /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		12A3E168282C09EA00D5AFBA /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		12A3E16A282E62DB00D5AFBA /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		12A3E16C282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				12A3E12E28291F8500D5AFBA /* ReviewForm.storyboard */,
+				12A3E16A282E62DB00D5AFBA /* RatingsView.swift */,
+				12A3E16C282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift */,
 			);
 			path = ReviewForm;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12A3E15B282A736700D5AFBA /* LocationItem.swift in Sources */,
+				12A3E16B282E62DB00D5AFBA /* RatingsView.swift in Sources */,
 				12A3E15F282AA40D00D5AFBA /* ExploreHeaderView.swift in Sources */,
 				06C1CB412734A22300C385A7 /* ExploreItem.swift in Sources */,
 				12A3E127282524A100D5AFBA /* DataManager.swift in Sources */,
@@ -511,6 +518,7 @@
 				12A3E13A2829270200D5AFBA /* RestaurantDetailViewController.swift in Sources */,
 				12A3E12928254D2400D5AFBA /* MapViewController.swift in Sources */,
 				06AFDA1827311E3900A647E1 /* ExploreViewController.swift in Sources */,
+				12A3E16D282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift in Sources */,
 				06C1CB432734A30200C385A7 /* ExploreDataManager.swift in Sources */,
 				06C1CB462734A4E100C385A7 /* ExploreCell.swift in Sources */,
 				12A3E1222824125600D5AFBA /* RestaurantItem.swift in Sources */,

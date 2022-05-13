@@ -424,7 +424,7 @@
                     <navigationItem key="navigationItem" id="rOQ-tg-rvv">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qLS-Pt-Ezq">
                             <connections>
-                                <segue destination="LqK-Ae-8Qc" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="Qa2-2a-3dF"/>
+                                <segue destination="LqK-Ae-8Qc" kind="unwind" unwindAction="unwindReviewCancelWithSegue:" id="yPR-8l-X6H"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="58V-k8-GN3">
