@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses your camera to take pictures</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app uses your photo library pictures</string>
 </dict>
 </plist>
