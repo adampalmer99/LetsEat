@@ -135,7 +135,7 @@ extension PhotoFilterViewController: UIImagePickerControllerDelegate, UINavigati
 }
 
 extension PhotoFilterViewController: ImageFiltering {
-    func filterMainImage(filterItem: FilterItem) {
+    func filterMainImage(filterItem: FilterItem) {  
         if let mainImage = mainImage, let filter = filterItem.filter {
             if filter != "None" {
                 mainImageView.image = self.apply(filter: filter, originalImage: mainImage)
