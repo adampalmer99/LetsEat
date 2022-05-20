@@ -27,6 +27,7 @@
 		124F27212837AF4000D62F0F /* LetsEatModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 124F271F2837AF4000D62F0F /* LetsEatModel.xcdatamodeld */; };
 		124F27242837B63300D62F0F /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F27232837B63300D62F0F /* ReviewItem.swift */; };
 		124F27262837B84300D62F0F /* RestaurantPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F27252837B84300D62F0F /* RestaurantPhotoItem.swift */; };
+		124F27292837C99200D62F0F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F27282837C99200D62F0F /* CoreDataManager.swift */; };
 		12A3E1182822AEC200D5AFBA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E1172822AEC200D5AFBA /* LocationViewController.swift */; };
 		12A3E11A2822B33400D5AFBA /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12A3E1192822B33400D5AFBA /* Locations.plist */; };
 		12A3E11C2822B87900D5AFBA /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E11B2822B87900D5AFBA /* LocationDataManager.swift */; };
@@ -106,6 +107,7 @@
 		124F27202837AF4000D62F0F /* LetsEatModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsEatModel.xcdatamodel; sourceTree = "<group>"; };
 		124F27232837B63300D62F0F /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
 		124F27252837B84300D62F0F /* RestaurantPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPhotoItem.swift; sourceTree = "<group>"; };
+		124F27282837C99200D62F0F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		12A3E1172822AEC200D5AFBA /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		12A3E1192822B33400D5AFBA /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
 		12A3E11B2822B87900D5AFBA /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
@@ -265,6 +267,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		124F27272837C8C900D62F0F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				124F271F2837AF4000D62F0F /* LetsEatModel.xcdatamodeld */,
+				124F27282837C99200D62F0F /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		12A3E1142822AE1300D5AFBA /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,11 +325,11 @@
 		12A3E1252825248100D5AFBA /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				124F27272837C8C900D62F0F /* CoreData */,
 				12A3E165282BFA9800D5AFBA /* No Data */,
 				12A3E13B28296CAE00D5AFBA /* JSON */,
 				12A3E126282524A100D5AFBA /* DataManager.swift */,
 				12A3E133282920DA00D5AFBA /* Segue.swift */,
-				124F271F2837AF4000D62F0F /* LetsEatModel.xcdatamodeld */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -557,6 +568,7 @@
 				12A3E1242824260E00D5AFBA /* MapDataManager.swift in Sources */,
 				12A3E167282BFACC00D5AFBA /* NoDataView.swift in Sources */,
 				0653DB882730CFB500D63233 /* AppDelegate.swift in Sources */,
+				124F27292837C99200D62F0F /* CoreDataManager.swift in Sources */,
 				12A3E15928296FA700D5AFBA /* RestaurantDataManager.swift in Sources */,
 				06670596273227A900545EB6 /* RestaurantListViewController.swift in Sources */,
 				12A3E134282920DA00D5AFBA /* Segue.swift in Sources */,
