@@ -28,6 +28,7 @@
 		124F27242837B63300D62F0F /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F27232837B63300D62F0F /* ReviewItem.swift */; };
 		124F27262837B84300D62F0F /* RestaurantPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F27252837B84300D62F0F /* RestaurantPhotoItem.swift */; };
 		124F27292837C99200D62F0F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F27282837C99200D62F0F /* CoreDataManager.swift */; };
+		1287F2A6284F50D10086F1C5 /* ReviewFormViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1287F2A5284F50D10086F1C5 /* ReviewFormViewControllerTableViewController.swift */; };
 		12A3E1182822AEC200D5AFBA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E1172822AEC200D5AFBA /* LocationViewController.swift */; };
 		12A3E11A2822B33400D5AFBA /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12A3E1192822B33400D5AFBA /* Locations.plist */; };
 		12A3E11C2822B87900D5AFBA /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E11B2822B87900D5AFBA /* LocationDataManager.swift */; };
@@ -62,7 +63,6 @@
 		12A3E167282BFACC00D5AFBA /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E166282BFACC00D5AFBA /* NoDataView.swift */; };
 		12A3E169282C09EA00D5AFBA /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3E168282C09EA00D5AFBA /* NoDataView.xib */; };
 		12A3E16B282E62DB00D5AFBA /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E16A282E62DB00D5AFBA /* RatingsView.swift */; };
-		12A3E16D282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3E16C282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +108,7 @@
 		124F27232837B63300D62F0F /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
 		124F27252837B84300D62F0F /* RestaurantPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPhotoItem.swift; sourceTree = "<group>"; };
 		124F27282837C99200D62F0F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1287F2A5284F50D10086F1C5 /* ReviewFormViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewFormViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		12A3E1172822AEC200D5AFBA /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		12A3E1192822B33400D5AFBA /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
 		12A3E11B2822B87900D5AFBA /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
@@ -142,7 +143,6 @@
 		12A3E166282BFACC00D5AFBA /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		12A3E168282C09EA00D5AFBA /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 		12A3E16A282E62DB00D5AFBA /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
-		12A3E16C282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +261,7 @@
 		124F27222837B52100D62F0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1287F2A5284F50D10086F1C5 /* ReviewFormViewControllerTableViewController.swift */,
 				124F27232837B63300D62F0F /* ReviewItem.swift */,
 				124F27252837B84300D62F0F /* RestaurantPhotoItem.swift */,
 			);
@@ -349,7 +350,6 @@
 				124F27222837B52100D62F0F /* Model */,
 				12A3E12E28291F8500D5AFBA /* ReviewForm.storyboard */,
 				12A3E16A282E62DB00D5AFBA /* RatingsView.swift */,
-				12A3E16C282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift */,
 			);
 			path = ReviewForm;
 			sourceTree = "<group>";
@@ -579,9 +579,9 @@
 				12A3E13A2829270200D5AFBA /* RestaurantDetailViewController.swift in Sources */,
 				12A3E12928254D2400D5AFBA /* MapViewController.swift in Sources */,
 				124F27262837B84300D62F0F /* RestaurantPhotoItem.swift in Sources */,
+				1287F2A6284F50D10086F1C5 /* ReviewFormViewControllerTableViewController.swift in Sources */,
 				124F2716283279F400D62F0F /* FilterItem.swift in Sources */,
 				06AFDA1827311E3900A647E1 /* ExploreViewController.swift in Sources */,
-				12A3E16D282E99A000D5AFBA /* ReviewFormViewControllerTableViewController.swift in Sources */,
 				06C1CB432734A30200C385A7 /* ExploreDataManager.swift in Sources */,
 				06C1CB462734A4E100C385A7 /* ExploreCell.swift in Sources */,
 				124F27212837AF4000D62F0F /* LetsEatModel.xcdatamodeld in Sources */,

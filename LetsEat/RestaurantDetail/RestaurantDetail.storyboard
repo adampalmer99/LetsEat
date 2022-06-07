@@ -245,7 +245,7 @@
                                                                     <rect key="frame" x="-0.5" y="0.0" width="120" height="62"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <connections>
-                                                                        <segue destination="GBa-F2-6Oj" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="9tb-aG-qwY"/>
+                                                                        <segue destination="GBa-F2-6Oj" kind="presentation" identifier="showPhotoFilter" modalPresentationStyle="fullScreen" id="9tb-aG-qwY"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -290,7 +290,7 @@
                                                                     <rect key="frame" x="-0.5" y="0.0" width="120" height="62"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <connections>
-                                                                        <segue destination="XG8-Ri-pIR" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="lDE-DR-HB9"/>
+                                                                        <segue destination="XG8-Ri-pIR" kind="presentation" identifier="showReview" modalPresentationStyle="fullScreen" id="lDE-DR-HB9"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
