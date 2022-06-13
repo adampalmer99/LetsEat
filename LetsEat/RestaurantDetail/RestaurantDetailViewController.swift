@@ -55,7 +55,7 @@ private extension RestaurantDetailViewController {
  
     func initialise() {
         setupLabels()
-        creaateMap()
+        createMap()
         createRating()
     }
     
@@ -78,8 +78,17 @@ private extension RestaurantDetailViewController {
     }
     
     func createRating() {
-        ratingsView.rating = 3.5
-        ratingsView.isEnabled = true
+        ratingsView.isEnabled = false
+        if let restaurantID = selectedRestaurant?.restaurantID {
+            let ratingValue = CoreDataManager.shared.fetchRestaurantRating(by: restaurantID)
+            ratingsView.rating = ratingValue
+            if ratingValue.isNaN {
+                overallRatingLabel.text = "0.0"
+            } else {
+                let roundedValue = ((ratingValue * 10).rounded() / 10)
+                overallRatingLabel.text = "\(roundedValue)"
+            }
+        }
     }
     
     
@@ -96,7 +105,7 @@ private extension RestaurantDetailViewController {
     }
     
     
-    func creaateMap() {
+    func createMap() {
         guard let annotation = selectedRestaurant, let long = annotation.long, let lat = annotation.lat else {
             return
         }
