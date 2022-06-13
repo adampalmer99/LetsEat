@@ -83,3 +83,15 @@ extension ReviewsViewController: UICollectionViewDataSource {
 }
 
 
+extension ReviewsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let edgeInset = 7.0
+        if reviewItems.count == 1 {
+            let cellWidth = collectionView.frame.size.width - (edgeInset * 2)
+            return CGSize(width: cellWidth, height: 200)
+        } else {
+            let cellWidth = collectionView.frame.size.width - (edgeInset * 3)
+            return CGSize(width: cellWidth, height: 200)
+        }
+    }
+}
