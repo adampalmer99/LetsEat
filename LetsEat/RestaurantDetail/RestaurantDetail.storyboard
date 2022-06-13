@@ -472,10 +472,10 @@
             </objects>
             <point key="canvasLocation" x="4596" y="-349"/>
         </scene>
-        <!--View Controller-->
+        <!--Reviews View Controller-->
         <scene sceneID="s68-WA-D2y">
             <objects>
-                <viewController id="I7Z-yA-lrD" sceneMemberID="viewController">
+                <viewController id="I7Z-yA-lrD" customClass="ReviewsViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2e-3Y-CNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,7 +490,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="0gs-9C-p7g">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="0gs-9C-p7g" customClass="ReviewCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="12.5" y="0.0" width="350" height="208"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -532,7 +532,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Mn-9W5">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Mn-9W5" customClass="RatingsView" customModule="LetsEat" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="25" width="117" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -559,8 +559,18 @@
                                             <constraint firstItem="G9K-FW-IS7" firstAttribute="leading" secondItem="0gs-9C-p7g" secondAttribute="leading" constant="8" id="znA-Od-JGY"/>
                                         </constraints>
                                         <size key="customSize" width="350" height="208"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="yJy-Me-hbd" id="Q6v-hE-rXp"/>
+                                            <outlet property="nameLabel" destination="0Ee-lM-dfY" id="VFn-z8-bIX"/>
+                                            <outlet property="reviewLabel" destination="Ltw-TD-YVU" id="QiJ-6S-SUF"/>
+                                            <outlet property="titleLabel" destination="G9K-FW-IS7" id="sng-Zc-WOY"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="I7Z-yA-lrD" id="EkF-iL-gvp"/>
+                                    <outlet property="delegate" destination="I7Z-yA-lrD" id="SS9-49-lBk"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KYY-TR-pBi"/>
@@ -571,6 +581,9 @@
                             <constraint firstItem="G3d-i3-aYj" firstAttribute="top" secondItem="b2e-3Y-CNB" secondAttribute="top" id="yJA-SW-7TR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="G3d-i3-aYj" id="GOb-vk-eHC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sv-SZ-nNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
