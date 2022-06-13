@@ -19,6 +19,12 @@ struct CoreDataManager {
         }
     }
     
+    func fetchRestaurantRating(by identifier: Int) -> Double {
+        let reviewItems = fetchReviews(by: identifier)
+        let sum = reviewItems.reduce(0, {$0 + ($1.rating ?? 0)})
+        return sum / Double(reviewItems.count)
+    }
+    
     func addReview(_ reviewItem: ReviewItem) {
         let review = Review(context: container.viewContext)
         review.date = Date()
